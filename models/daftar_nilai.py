@@ -11,11 +11,13 @@ dataMahasiswa = {
     'Nilai Akhir': []
 }
 
+
 # fungsi mengembalikan dataMahasiswa
 
 
 def index():
     return dataMahasiswa
+
 
 # fungsi tambah data
 
@@ -39,7 +41,7 @@ def tambah_data(no, nim, nama, tugas, uas, uts):
 def ubah_data():
     # print data untuk referensi nim pada data yang mau dihapus
     print(tabulate(dataMahasiswa, headers=[
-        'No', 'NIM', 'Nama', 'Tugas', 'UTS', 'UAS', 'Nilai Akhir'], tablefmt="fancy_grid"))
+          'No', 'NIM', 'Nama', 'Tugas', 'UTS', 'UAS', 'Nilai Akhir'], tablefmt="fancy_grid"))
 
     # cek jika ada nama  tersebut di dataMahasiswa
     nim = int(input('Masukan NIM yang mau diedit  :'))
@@ -111,7 +113,7 @@ def cari_data():
             'Tugas': [dataMahasiswa['Tugas'][namaIndex]],
             'Uts': [dataMahasiswa['Uts'][namaIndex]],
             'Uas': [dataMahasiswa['Uas'][namaIndex]],
-            'Nilai Akhir': [dataMahasiswa['Nilai Akhir'][namaIndex]],
+            'Nilai Akhir': [dataMahasiswa['Nilai Akhir'][namaIndex]]
         }
         # memparsing parameter hasil pencarian ke modul cetak hasil pencarian
         view_nilai.cetak_hasil_pencarian(hasilPencarian)
